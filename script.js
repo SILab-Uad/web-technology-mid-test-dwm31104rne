@@ -1,4 +1,4 @@
-// TODO: Implementasikan logika untuk menghasilkan kata sandi berdasarkan input pengguna
+// Fungsi untuk menghasilkan kata sandi berdasarkan input pengguna
 const generatePassword = (length, options) => {
     // Set karakter untuk pembuatan kata sandi
     const uppercase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
@@ -6,7 +6,7 @@ const generatePassword = (length, options) => {
     const numbers = "0123456789";
     const specialChars = "!@#$%^&*()";
 
-    // TODO: Buat variabel untuk set karakter berdasarkan opsi yang dipilih
+    // Buat variabel untuk set karakter berdasarkan opsi yang dipilih
     let selectedChar = "";
     if (options.includeUppercase) selectedChar += uppercase;
     if (options.includeLowercase) selectedChar += lowercase;
@@ -18,7 +18,7 @@ const generatePassword = (length, options) => {
         return null;
     }
     
-    // TODO: Hasilkan kata sandi berdasarkan kriteria yang dipilih
+    // Hasilkan kata sandi berdasarkan kriteria yang dipilih
     let password = "";
     for (let i = 0; i < length; i++) {
         const indexChar = Math.floor(Math.random() * selectedChar.length);
@@ -28,7 +28,7 @@ const generatePassword = (length, options) => {
     return password;
 };
 
-// TODO: Tambahkan event listener pada tombol untuk memanggil generatePassword dan menampilkan output
+// Tambahkan event listener pada tombol untuk memanggil generatePassword dan menampilkan output
 document.getElementById("generateBtn").addEventListener('click', () => {
     const length = parseInt(document.getElementById("length").value, 10);
     const options = {
@@ -38,13 +38,17 @@ document.getElementById("generateBtn").addEventListener('click', () => {
         includeSpecialChars: document.getElementById("includeSpecialChars").checked
     };
     const password = generatePassword(length, options);
-    document.getElementById('passwordOutput').textContent = password;
+    document.getElementById('passwordOutput').textContent = password || "Kata sandi gagal dibuat.";
 });
 
-// BONUS: Implementasikan fungsionalitas salin ke papan klip
+// Implementasikan fungsionalitas salin ke papan klip
 document.getElementById("copyBtn").addEventListener('click', () => {
     const password = document.getElementById("passwordOutput").textContent;
-    navigator.clipboard.writeText(password)
-        .then(() => alert("Kata sandi telah disalin ke clipboard!"))
-        .catch(err => console.error("Gagal menyalin kata sandi:", err));
+    if (password) {
+        navigator.clipboard.writeText(password)
+            .then(() => alert("Kata sandi telah disalin ke clipboard!"))
+            .catch(err => console.error("Gagal menyalin kata sandi:", err));
+    } else {
+        alert("Tidak ada kata sandi untuk disalin.");
+    }
 });

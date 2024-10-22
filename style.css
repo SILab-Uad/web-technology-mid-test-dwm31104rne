@@ -1,56 +1,35 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Warna latar belakang biru lembut */
+    color: #333;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #ffe4e1; /* Latar belakang warna pink lembut */
 }
 
 .container {
+    background-color: #fff; /* Warna latar belakang kontainer */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
-    padding: 30px;
-    background-color: #ffffff; /* Warna latar belakang untuk kontainer */
-    border-radius: 15px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    width: 90%;
-    max-width: 400px;
 }
 
-/* Gaya untuk heading dan label */
 h1 {
-    font-size: 2.2em;
-    margin-bottom: 20px;
-    color: #d5006d; /* Warna pink untuk header */
+    color: #ff69b4; /* Warna judul pink */
 }
 
-label {
-    font-size: 1.3em;
-    font-weight: 200;
-    text-align: right;
-    color: #c71585; /* Warna pink lebih gelap untuk label */
-}
-
-/* Gaya untuk tombol */
 button {
-    background-color: #ff69b4; /* Warna pink untuk tombol */
-    color: white;
+    background-color: #ff69b4; /* Warna tombol pink */
     border: none;
+    color: white;
     padding: 10px 20px;
+    margin-top: 10px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #ff1493; /* Warna pink lebih gelap saat hover */
+    background-color: #ff1493; /* Warna tombol saat hover */
 }
-
-/* Gaya untuk output teks */
-#passwordOutput {
-    margin-top: 20px;
-    font-size: 1.5em;
-    color: #4a4a4a; /* Warna teks untuk output */
-}
-
