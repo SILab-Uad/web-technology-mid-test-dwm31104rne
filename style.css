@@ -4,24 +4,53 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #e0e7ff; /* Background color */
+    background-color: #ffe4e1; /* Latar belakang warna pink lembut */
 }
 
 .container {
     text-align: center;
     padding: 30px;
-    background-color: #ffffff; /* Background color for container */
+    background-color: #ffffff; /* Warna latar belakang untuk kontainer */
     border-radius: 15px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     width: 90%;
     max-width: 400px;
 }
 
-/* TODO: Add styles for labels, inputs, buttons, and output text */
+/* Gaya untuk heading dan label */
 h1 {
     font-size: 2.2em;
     margin-bottom: 20px;
-    color: #4a4a4a; /* Header color */
+    color: #d5006d; /* Warna pink untuk header */
 }
 
-/* Add more styles here as needed */
+label {
+    font-size: 1.3em;
+    font-weight: 200;
+    text-align: right;
+    color: #c71585; /* Warna pink lebih gelap untuk label */
+}
+
+/* Gaya untuk tombol */
+button {
+    background-color: #ff69b4; /* Warna pink untuk tombol */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ff1493; /* Warna pink lebih gelap saat hover */
+}
+
+/* Gaya untuk output teks */
+#passwordOutput {
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #4a4a4a; /* Warna teks untuk output */
+}
+
